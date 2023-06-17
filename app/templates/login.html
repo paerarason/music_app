@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+</head>
+<body>
+    <div class="card">
+    <form method="POST"  class="post-form" enctype="multipart/form-data">  
+        {% csrf_token %}  
+        {{ form.as_p }}  
+        <button class="btn" type="submit" class="save btn btn-default">LOG IN</button>
+        <div class="btn">
+          <a href="/register">New User</a> 
+        </div>
+        
+    </form>
+    </div>
+    <style>
+        .card {
+            border: 5px solid;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            color: azure;
+            align-content: center;background-color: rgb(174, 155, 122);
+          }
+          .btn{
+            height: 50px;
+            width: 200px;
+            color: rgb(209, 194, 196);
+            background:rgb(0, 0, 0) ;
+            text-align: center;
+            align-content: center;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: large;
+          }
+          a{
+            color: rgb(215, 225, 234);
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: large;
+          }
+          .body{
+            
+            background: fixed;
+          }
+    </style>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{% load static %}
+<script src="{% static 'upload.js' %}"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Field Example</title>
+  <style>
+    .email-container {
+      margin-bottom: 10px;
+    }
+
+    .delete-button {
+      margin-left: 10px;
+      background-color: rgb(90, 53, 53);
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+  
+</head>
+<body>
+  
+  <form method="POST" class="post-form" enctype="multipart/form-data">  
+    {% csrf_token %}  
+    {{ form.as_p }}
+    <label>
+      <input type="file" accept=".mp3,audio/*">
+    </label>
+    <label>
+      <input type="radio" name="access" value="private" onclick="toggleEmailField()"> Private
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="access" value="public" onclick="toggleEmailField()"> Public
+    </label>
+    <br>
+    <label>
+      <input type="radio" name="access" value="protected" onclick="toggleEmailField()"> Protected
+    </label>
+    <br>
+    <div id="emailField" style="display: none;">
+      <label>Email:</label>
+      <div id="emailContainer"></div>
+      <button type="button" onclick="addEmailField()">Add</button>
+    </div>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
