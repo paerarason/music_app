@@ -2,8 +2,8 @@
 
 
 Create a website that allows users to upload music and share it with each other.
-Users should be able to register on the platform using Email.
-Users should be able to log in to the platform using Email and password.
+#Users should be able to register on the platform using Email.
+#Users should be able to log in to the platform using Email and password.
 Users should be able to upload music files on the platform.
 Users can upload music files as public/private/protected.
 Public Music File: Visible to all the users
